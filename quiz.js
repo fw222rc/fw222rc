@@ -170,31 +170,31 @@ function draw() {
       characterCreatorButton.style("font-family", "Rock Salt");
       characterCreatorButton.style("font-size", "40");
       characterCreatorButton.position(width/2, height*0.7);
-      characterCreatorButton.mousePressed(gotoLink);
+      characterCreatorButton.mousePressed(gotolink);
     } else if (scoreEcological > scoreSocial && scoreEcological > scoreCultural && scoreEcological > scoreEconomical) {
       characterCreatorButton = createButton("🌿 ECOLOGICAL QUEEN >>");
       characterCreatorButton.style("font-family", "Rock Salt");
       characterCreatorButton.style("font-size", "40");
       characterCreatorButton.position(width/2, height*0.7);
-      characterCreatorButton.mousePressed(gotoLink);
+      characterCreatorButton.mousePressed(gotolink);
     } else if (scoreCultural > scoreSocial && scoreCultural > scoreEcological && scoreCultural > scoreEconomical) {
       characterCreatorButton = createButton("🎭 CULTURAL DIVA >>");
       characterCreatorButton.style("font-family", "Rock Salt");
       characterCreatorButton.style("font-size", "40");
       characterCreatorButton.position(width/2, height*0.7);
-      characterCreatorButton.mousePressed(gotoLink);
+      characterCreatorButton.mousePressed(gotolink);
     } else if (scoreEconomical > scoreSocial && scoreEconomical > scoreEcological && scoreEconomical > scoreCultural) {
       characterCreatorButton = createButton("💸 ECONOMICAL BUSINESS MAN >>");
       characterCreatorButton.style("font-family", "Rock Salt");
       characterCreatorButton.style("font-size", "40");
       characterCreatorButton.position(width/2, height*0.7);
-      characterCreatorButton.mousePressed(gotoLink);
+      characterCreatorButton.mousePressed(gotolink);
     } else {
       characterCreatorButton = createButton("⚖️ BALANCED PRINCE >>");
       characterCreatorButton.style("font-family", "Rock Salt");
       characterCreatorButton.style("font-size", "40");
       characterCreatorButton.position(width/2, height*0.7);
-      characterCreatorButton.mousePressed(gotoLink);
+      characterCreatorButton.mousePressed(gotolink);
     }
     
     answerOne.hide();
