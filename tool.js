@@ -7,17 +7,14 @@ let characters = [
 ];
 let selectedCharacter = null;
 
-
 let hairOptions = ["1", "2", "3"];
 let outfitOptions = ["1", "2", "3"];
 let hairIndex = 0;
 let outfitIndex = 0;
 
-
 let characterImages = {};
 let hairImages = [];
 let outfitImages = [];
-
 
 let fileCount = 12;
 let optionsPerCharacter = 3;
@@ -28,17 +25,7 @@ let fileCount2 = 12;
 let optionsPerCharacter2 = 3;
 let outfitOffset = 0;
 
-
-
-
-
-
-//unction preload()
-  //characterImages["Cultural Diva"] = loadImage("base.png");
-
-
 function preload(){
-
 
   for (let i = 0; i < fileCount; i++) {
     let filename = "hair/hair" + (i + 1) + ".png";
@@ -53,22 +40,15 @@ function preload(){
     characterImages["Economical Businessman"] = loadImage("character/character2.png");
     characterImages["Cultural Diva"] = loadImage("character/character3.png");
     characterImages["Social Queen"] = loadImage("character/character4.png");
-
-
-
-
 }
-
 
 function setup() {
   createCanvas(400, 600);
   textAlign(CENTER, CENTER);
 }
 
-
 function draw() {
   background(255);
-
 
   if (state === "home") {
     drawHomeScreen();
@@ -82,7 +62,6 @@ function drawHomeScreen() {
   textSize(22);
   fill(0);
   text("Choose Your Character", width / 2, 60);
-
 
   for (let i = 0; i < characters.length; i++) {
     let y = 120 + i * 60;
@@ -116,18 +95,12 @@ function drawCustomizeScreen() {
 
 
   // Hair Section
-
-
   drawArrow(50, 110, "<");
   drawArrow(320, 110, ">");
 
-
   // Outfit Section
-
-
   drawArrow(50, 300, "<");
   drawArrow(320, 300, ">");
-
 
   // Back Button
   fill(255,224,1,50);
@@ -144,7 +117,6 @@ function drawCustomizeScreen() {
   text("Save", 315,515, 30);
 }
 
-
 function drawArrow(x, y, label) {
   fill(255,224,1,50);
   rect(x, y, 30, 30,5);
@@ -152,7 +124,6 @@ function drawArrow(x, y, label) {
   textSize(18);
   text(label, x + 15, y + 15);
 }
-
 
 function mousePressed() {
   if (state === "home") {
@@ -190,10 +161,8 @@ function mousePressed() {
         hairIndex = hairOffset;
       }
 
-
       console.log("next hair");
     }
-
 
     // Outfit arrows
     if (mouseX > 50 && mouseX < 80 && mouseY > 300 && mouseY < 330) {
