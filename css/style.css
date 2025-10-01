@@ -1,0 +1,250 @@
+.sixtyfour {
+  font-family: "Sixtyfour", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0;
+}
+
+html {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    color: rgb(215, 220, 250);
+    margin: none;
+    
+    font-family: "Sixtyfour", monospace;
+    font-size: 3vw;
+    max-width: 80vw;
+    text-align: left;
+
+    font-display: block;
+
+    animation: scanlines 3s infinite;
+    overflow-x: hidden;
+
+
+}
+
+body    {
+    margin-left: 15vw;
+    rotate: -1deg;
+    animation: glitch 1s infinite;
+}
+
+p {
+    padding-top: 5vw;
+}
+
+pre {
+    font-family: "Sixtyfour", monospace;
+    animation: glitchAscii 1s infinite;
+}
+
+#asciifill {
+    position: relative;
+    left: -50vw;
+    z-index: -100;
+}
+
+#overlay {
+    position: relative;
+    left:-50vw;
+    bottom: 20vh;
+    z-index: -100;
+}
+
+#password {
+    position: absolute;
+    animation: none;
+}
+
+#timestamp {
+    font-size: 1vw;
+}
+
+a {
+    animation: glitchLink 1s infinite;
+}
+
+input {
+
+    border: none;
+    background-color: rgb(215, 220, 250); 
+    color: rgb(27, 27, 29);
+    margin: auto;
+
+    padding: 1vw;
+    
+    font-family: "Sixtyfour", monospace;
+    font-size: 2vw;
+    text-align: left;
+}
+
+button {
+    border: none;
+    background-color: rgb(215, 220, 250); 
+    color: rgb(27, 27, 29);
+    margin: auto;
+
+    padding: 1vw;
+    
+    font-family: "Sixtyfour", monospace;
+    font-size: 2vw;
+    text-align: left;
+}
+
+#scanline   {
+
+    background-color: rgba(215, 220, 250, 0.2); 
+
+    position: relative;
+    left: -50%;
+    width: 200vw;
+    height: 0.2vh;
+
+    animation: scanlineSingle 6s infinite;
+}
+
+@keyframes glitch {
+    5% {
+        transform: translateX(-0.3vw);
+    }
+
+    50% {
+        transform: translateY(0.3vh);
+    }
+
+    75% {
+        transform: translateX(0.3vw);
+    }
+
+    100% {
+        transform: translateY(-0.3vh);
+    }
+}
+
+@keyframes glitchLink {
+    0%  {
+        font-style: italic;
+        text-decoration: line-through;
+        text-transform: none;
+    }
+
+
+    2% {
+        font-style: normal;
+    }
+
+
+    90% {
+        font-style: italic;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+
+
+    100%    {
+        font-style: normal;
+        text-transform: uppercase;
+    }
+}
+
+@keyframes glitchAscii {
+    0%  {
+        font-style: italic;
+        text-transform: none;
+    }
+
+
+    20% {
+        font-style: oblique;
+    }
+
+
+    80% {
+        font-style: italic;
+        text-transform: capitalize;
+    }
+
+
+    95%    {
+        font-style: normal;
+        text-transform: uppercase;
+    }
+}
+
+@keyframes scanlines {
+    0%  {
+        background-image:
+        repeating-linear-gradient(0deg, rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99)),
+        url("../images/noise.gif");
+    }
+
+    3% {
+        background-image:
+        repeating-linear-gradient(0deg, rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99)),
+        url("../images/noise.gif");
+    }
+
+    5% {
+        background-image:
+        repeating-linear-gradient(0deg, rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99)),
+        url("../images/noise.gif");
+    }
+
+    5% {
+        background-image:
+        repeating-linear-gradient(0deg, rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99)),
+        url("../images/noise.gif");    }
+
+    60% {
+        background-image:
+        repeating-linear-gradient(0deg, rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99)),
+        url("../images/noise.gif");    }
+
+    65%  {
+        background-image:
+        repeating-linear-gradient(0deg, rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99)),
+        url("../images/noise.gif");    }
+
+    67% {
+        background-image:
+        repeating-linear-gradient(0deg, rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99)),
+        url("../images/noise.gif");    }
+
+    70% {
+        background-image:
+        repeating-linear-gradient(0deg, rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99)),
+        url("../images/noise.gif");    }
+
+    75% {
+        background-image:
+        repeating-linear-gradient(0deg, rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99)),
+        url("../images/noise.gif");    }
+
+    100% {
+        background-image:
+        repeating-linear-gradient(0deg, rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99), rgba(5, 5, 5, 0.99), rgba(25, 25, 25, 0.99)),
+        url("../images/noise.gif");    }
+
+}
+
+@keyframes scanlineSingle   {
+    0%  {
+
+    }
+
+    50% {
+        transform: translateY(-50vh);
+    }
+
+    60% {
+        transform: translateY(10vh);
+    }
+
+    80% {
+        transform: translateY(-200vh)
+    }
+}
